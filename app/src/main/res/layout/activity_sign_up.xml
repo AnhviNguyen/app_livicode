@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication.ui.sign_up">
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="286dp">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="389dp"
+                    android:layout_height="273dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/user7"
+                    tools:srcCompat="@drawable/user7" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:fontFamily="@font/capriola"
+                android:padding="5dp"
+                android:text="Sign up"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/capriola"
+                android:text="Create your account"
+                android:textAlignment="center"
+                android:textColor="@color/gray_border"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/editTextText"
+                android:layout_width="341dp"
+                android:layout_height="55dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/input_border"
+                android:ems="10"
+                android:hint="Name"
+                android:padding="8dp"
+                android:textAlignment="textStart"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextEmailAddress"
+                android:layout_width="341dp"
+                android:layout_height="55dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/input_border"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="8dp"
+                android:textAlignment="textStart"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPassword"
+                android:layout_width="340dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_border"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="7dp"
+                android:textAlignment="textStart"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/sign_up_btn"
+                style="@style/MyButton"
+                android:layout_width="342dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="Sign up" />
+
+            <TextView
+                android:id="@+id/login_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:padding="5dp"
+                android:paddingTop="10dp"
+                android:text="Login"
+                android:textAlignment="center"
+                android:textColor="@color/gray_border" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
