@@ -7,4 +7,87 @@
     android:layout_height="match_parent"
     tools:context="com.example.myapplication.ui.lesson">
 
+  <ScrollView
+      android:layout_width="409dp"
+      android:layout_height="657dp"
+      android:padding="10dp"
+      tools:layout_editor_absoluteX="1dp"
+      tools:layout_editor_absoluteY="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/course_fragment"
+            android:name="com.example.myapplication.fragment.back_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/choose_lesson_course_name"
+            android:layout_width="276dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="Laravel"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.609"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <TextView
+          android:id="@+id/textView11"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingTop="20dp"
+          android:text="Name Lesson"
+          android:textSize="24sp"
+          android:textStyle="bold" />
+
+      <TextView
+          android:id="@+id/textView12"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingTop="10dp"
+          android:text="3 of 11 lessons"
+          android:textColor="@color/gray_border" />
+
+      <com.google.android.material.tabs.TabLayout
+          android:id="@+id/tabLayout"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/input_border"
+          app:tabIndicatorAnimationMode="elastic"
+          app:tabIndicatorGravity="stretch"
+          app:tabSelectedTextColor="@color/orange">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tuesday" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wednesday" />
+      </com.google.android.material.tabs.TabLayout>
+
+
+    </LinearLayout>
+  </ScrollView>
   </androidx.constraintlayout.widget.ConstraintLayout>
