@@ -29,7 +29,7 @@
             android:textColor="@color/light_blue" />
 
         <TextView
-            android:id="@+id/course_name"
+            android:id="@+id/choose_lesson_course_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingVertical="10dp"

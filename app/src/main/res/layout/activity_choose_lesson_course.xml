@@ -30,11 +30,11 @@
                     android:layout_height="match_parent" />
 
                 <TextView
-                    android:id="@+id/mycourse_name"
+                    android:id="@+id/choose_lesson_course_name"
                     android:layout_width="320dp"
                     android:layout_height="53dp"
                     android:gravity="center_vertical"
-                    android:text="Your courses"
+                    android:text="Laravel"
                     android:textSize="24sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -43,6 +43,51 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="347dp"
+                app:srcCompat="@drawable/user12" />
+
+            <TextView
+                android:id="@+id/choose_lesson_course_name_2"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:text="Laravel"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="Advanced web applications"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray_border" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="5dp">
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/choose_lesson_frame"
+                    android:name="com.example.myapplication.fragment.lesson_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
