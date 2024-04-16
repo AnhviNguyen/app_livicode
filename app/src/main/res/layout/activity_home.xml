@@ -146,11 +146,11 @@
                     android:textAlignment="viewStart"
                     android:textSize="20sp" />
 
-                <fragment
-                    android:id="@+id/course_fragment"
-                    android:name="com.example.myapplication.fragment.course_frame"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/courseHomeRecyleView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp" />
 
 
             </LinearLayout>

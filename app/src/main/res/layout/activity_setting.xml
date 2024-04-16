@@ -4,16 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="5dp"
     tools:context="com.example.myapplication.ui.setting">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:paddingBottom="120dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -44,7 +49,196 @@
                 android:layout_width="match_parent"
                 android:layout_height="241dp"
                 android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
                 app:srcCompat="@drawable/user3" />
+
+            <LinearLayout
+                android:layout_width="345dp"
+                android:layout_height="67dp"
+                android:background="@drawable/input_border"
+                android:orientation="horizontal"
+                android:textAlignment="textStart">
+
+                <ImageView
+                    android:id="@+id/imageView21"
+                    android:layout_width="20dp"
+                    android:layout_height="47dp"
+                    android:layout_weight="1"
+                    android:textAlignment="viewStart"
+                    app:srcCompat="@drawable/baseline_circle_notifications_24" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Notification"
+                    android:textAlignment="viewStart"
+                    android:textSize="18dp" />
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingTop="20dp"
+                android:text="Account Information"
+                android:textAlignment="viewStart"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:layout_width="349dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_border"
+                android:orientation="horizontal"
+                android:textAlignment="textStart">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="20dp"
+                    android:layout_height="47dp"
+                    android:layout_weight="1"
+                    android:textAlignment="viewStart"
+                    app:srcCompat="@drawable/baseline_account_circle_24" />
+
+                <LinearLayout
+                    android:layout_width="167dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/name_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:text="TextView"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_border" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/baseline_navigate_next_24" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="349dp"
+                android:layout_height="71dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_border"
+                android:orientation="horizontal"
+                android:textAlignment="textStart">
+
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="20dp"
+                    android:layout_height="47dp"
+                    android:layout_weight="1"
+                    android:textAlignment="viewStart"
+                    app:srcCompat="@drawable/baseline_email_24" />
+
+                <LinearLayout
+                    android:layout_width="167dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/email_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:text="TextView"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_border" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/baseline_navigate_next_24" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="347dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_border"
+                android:orientation="horizontal"
+                android:textAlignment="textStart">
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="20dp"
+                    android:layout_height="47dp"
+                    android:layout_weight="1"
+                    android:textAlignment="viewStart"
+                    app:srcCompat="@drawable/baseline_lock_person_24" />
+
+                <LinearLayout
+                    android:layout_width="167dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Password"
+                        android:textAlignment="viewStart"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/password_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:text="TextView"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_border" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/baseline_navigate_next_24" />
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

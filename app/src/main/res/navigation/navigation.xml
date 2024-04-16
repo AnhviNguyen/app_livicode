@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.myapplication.ui.MainActivity"
+        android:label="MainActivity" />
+    <activity
+        android:id="@+id/courses"
+        android:name="com.example.myapplication.ui.courses"
+        android:label="activity_courses"
+        tools:layout="@layout/activity_courses" />
+    <activity
+        android:id="@+id/profile2"
+        android:name="com.example.myapplication.ui.profile"
+        android:label="activity_profile"
+        tools:layout="@layout/activity_profile" />
+    <activity
+        android:id="@+id/search"
+        android:name="com.example.myapplication.ui.search"
+        android:label="activity_search"
+        tools:layout="@layout/activity_search" />
+    <activity
+        android:id="@+id/setting"
+        android:name="com.example.myapplication.ui.setting"
+        android:label="activity_setting"
+        tools:layout="@layout/activity_setting" />
+</navigation>
