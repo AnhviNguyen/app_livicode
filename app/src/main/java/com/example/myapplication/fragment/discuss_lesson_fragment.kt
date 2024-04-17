@@ -12,12 +12,7 @@ import com.example.newsprojectpractice.R
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [lesson_frame.newInstance] factory method to
- * create an instance of this fragment.
- */
-class lesson_frame : Fragment() {
+class discuss_lesson_fragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,13 +29,23 @@ class lesson_frame : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_lesson_frame, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_discuss_lesson, container, false)
     }
 
     companion object {
+        /**
+         * Use this factory method to create a new instance of
+         * this fragment using the provided parameters.
+         *
+         * @param param1 Parameter 1.
+         * @param param2 Parameter 2.
+         * @return A new instance of fragment discuss_lesson.
+         */
+        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            lesson_frame().apply {
+            discuss_lesson_fragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

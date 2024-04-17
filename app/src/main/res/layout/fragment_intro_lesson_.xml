@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication.fragment.Intro_lesson_Fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/lesson_image"
+                android:layout_width="424dp"
+                android:layout_height="250dp"
+                android:src="@tools:sample/avatars"
+                app:srcCompat="@drawable/user2" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Introduction"
+                android:textAlignment="viewStart"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/lesson_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="5dp"
+                android:text="Software technology has seen impressive advancements, enabling new applications and capabilities. Prominent examples include cloud computing and machine learning, which are transforming how we access and process data. Emerging technologies like artificial intelligence and the Internet of Things are positioned to further reshape our digital landscape in the years ahead."
+                android:textAlignment="viewStart"
+                android:textColor="@color/gray_border" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

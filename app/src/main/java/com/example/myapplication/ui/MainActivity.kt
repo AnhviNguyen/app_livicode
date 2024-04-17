@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.adapters.CategoriesHomeAdapter
 import com.example.myapplication.adapters.CourseHomeAdapter
 import com.example.newsprojectpractice.R
 import com.example.newsprojectpractice.databinding.ActivityHomeBinding
@@ -59,6 +60,13 @@ class MainActivity : AppCompatActivity() {
         val adapter = CourseHomeAdapter(course_home_images, course_home_durations, course_home_title, course_home_title_detail)
         binding.courseHomeRecyleView.layoutManager = LinearLayoutManager(this)
         binding.courseHomeRecyleView.adapter = adapter
+
+
+
+        val catagories = listOf("#Back-end", "#Front-end")
+        val adapter_cate = CategoriesHomeAdapter(catagories)
+        binding.categoriesHomeRecycleView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.categoriesHomeRecycleView.adapter = adapter_cate
 
 
     }

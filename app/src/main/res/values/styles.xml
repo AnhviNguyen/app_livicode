@@ -15,5 +15,9 @@
         <item name="android:textSize">11dp</item>
         android:textAllCaps="false"
     </style>
+
+    <style name="MyTabLayout.TextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
 </resources>
 

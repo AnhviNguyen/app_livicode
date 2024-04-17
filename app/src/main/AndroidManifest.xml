@@ -37,7 +37,7 @@
             android:name="com.example.myapplication.ui.log_in"
             android:exported="false" />
         <activity
-            android:name="com.example.myapplication.ui.lesson"
+            android:name="com.example.myapplication.ui.MainActivity"
             android:exported="false" />
         <activity
             android:name="com.example.myapplication.ui.profile"
@@ -46,7 +46,7 @@
             android:name="com.example.myapplication.ui.sign_up"
             android:exported="false" />
         <activity
-            android:name="com.example.myapplication.ui.MainActivity"
+            android:name="com.example.myapplication.ui.lesson"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

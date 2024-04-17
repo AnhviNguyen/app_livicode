@@ -4,13 +4,20 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.adapters.CourseHomeAdapter
 import com.example.newsprojectpractice.R
+import com.example.newsprojectpractice.databinding.ActivityCoursesBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class courses : AppCompatActivity() {
+
+    private val binding: ActivityCoursesBinding by lazy {
+        ActivityCoursesBinding.inflate(layoutInflater)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_courses)
+        setContentView(binding.root)
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigation)
         bottomNavigationView.selectedItemId = R.id.bottom_courses
@@ -41,5 +48,13 @@ class courses : AppCompatActivity() {
             }
             false
         }
+
+        val course_home_images = listOf(R.drawable.user9, R.drawable.user8, R.drawable.user7, R.drawable.user6)
+        val course_home_durations = listOf("3h 15mins", "2h 15mins", "1h 45mins", "2h 30mins")
+        val course_home_title = listOf("React", "Kotlin", "Laravel", "Java")
+        val course_home_title_detail = listOf("Advanced of web application", "Advanced of app application", "Advanced of web application", "Advanced of web application")
+        val adapter = CourseHomeAdapter(course_home_images, course_home_durations, course_home_title, course_home_title_detail)
+        binding.yourCourseRecycleView.layoutManager = LinearLayoutManager(this)
+        binding.yourCourseRecycleView.adapter = adapter
     }
 }

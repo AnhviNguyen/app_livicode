@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.example.myapplication.fragment.categories_home">
+
+    <Button
+        android:id="@+id/cate_btn"
+        style="@style/categories"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:text="React"
+        android:textSize="11sp" />
+</FrameLayout>

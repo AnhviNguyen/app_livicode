@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsprojectpractice.databinding.FragmentCourseFrameBinding
 
-class CourseHomeAdapter (
-    private val  images: List<Int>,
+class CourseHomeAdapter(
+    private val images: List<Int>,
     private val durations: List<String>,
     private val items: List<String>,
-    private val detail_contents : List<String>,
+    private val detail_contents: List<String>,
    )
     : RecyclerView.Adapter<CourseHomeAdapter.CourseHomeViewHolder>(){
     class CourseHomeViewHolder(private val binding: FragmentCourseFrameBinding) :RecyclerView.ViewHolder(binding.root){

@@ -117,15 +117,13 @@
                         android:layout_weight="1"
                         android:text="Categories: " />
 
-                    <Button
-                        android:id="@+id/button2"
-                        style="@style/categories"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/categoriesHomeRecycleView"
                         android:layout_width="wrap_content"
-                        android:layout_height="28dp"
-                        android:layout_marginStart="10dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="React"
-                        android:textSize="11sp" />
+                        android:scrollbars="none" />
+
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -150,7 +148,8 @@
                     android:id="@+id/courseHomeRecyleView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp" />
+                    android:layout_marginTop="10dp"
+                    android:scrollbars="none" />
 
 
             </LinearLayout>
