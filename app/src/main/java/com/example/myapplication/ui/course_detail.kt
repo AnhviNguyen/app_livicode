@@ -7,11 +7,18 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.newsprojectpractice.R
 import CourseApdater
+import android.content.Intent
 import android.view.View
 import com.example.myapplication.data.Expandable_data_course.data
+import com.example.newsprojectpractice.databinding.ActivityCourseDetailBinding
+import com.example.newsprojectpractice.databinding.ActivityHomeBinding
 
 
 class course_detail : AppCompatActivity() {
+    private val binding: ActivityCourseDetailBinding by lazy {
+        ActivityCourseDetailBinding.inflate(layoutInflater)
+    }
+
     lateinit var expandableListView: ExpandableListView
     lateinit var expandableListAdapter: CourseApdater
     lateinit var expandableListTitle:List<String>
@@ -21,9 +28,9 @@ class course_detail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_course_detail)
+        setContentView(binding.root)
 
-        expandableListView = findViewById(R.id.expandableListView)
+        expandableListView = binding.expandableListView
 
         expandabalListDetail = data
         expandableListTitle  = ArrayList<String> (expandabalListDetail.keys)
@@ -54,6 +61,15 @@ class course_detail : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
             false
+        }
+
+        binding.enterCourse.setOnClickListener{
+            val intent = Intent(this, choose_lesson_course::class.java)
+            startActivity(intent)
+        }
+
+        binding.courseDetailBackBtn.setOnClickListener {
+            onBackPressed()
         }
     }
 

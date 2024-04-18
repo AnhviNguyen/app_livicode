@@ -2,12 +2,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="com.example.myapplication.fragment.Intro_lesson_Fragment">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="20dp">
 
         <LinearLayout
@@ -19,7 +19,6 @@
                 android:id="@+id/lesson_image"
                 android:layout_width="424dp"
                 android:layout_height="250dp"
-                android:src="@tools:sample/avatars"
                 app:srcCompat="@drawable/user2" />
 
             <TextView

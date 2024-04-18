@@ -10,7 +10,7 @@ import com.example.newsprojectpractice.R
 import com.example.newsprojectpractice.databinding.ActivityCoursesBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class courses : AppCompatActivity() {
+class courses : AppCompatActivity(), CourseHomeAdapter.OnItemClickListener {
 
     private val binding: ActivityCoursesBinding by lazy {
         ActivityCoursesBinding.inflate(layoutInflater)
@@ -53,8 +53,13 @@ class courses : AppCompatActivity() {
         val course_home_durations = listOf("3h 15mins", "2h 15mins", "1h 45mins", "2h 30mins")
         val course_home_title = listOf("React", "Kotlin", "Laravel", "Java")
         val course_home_title_detail = listOf("Advanced of web application", "Advanced of app application", "Advanced of web application", "Advanced of web application")
-        val adapter = CourseHomeAdapter(course_home_images, course_home_durations, course_home_title, course_home_title_detail)
+        val adapter = CourseHomeAdapter(course_home_images, course_home_durations, course_home_title, course_home_title_detail, this)
         binding.yourCourseRecycleView.layoutManager = LinearLayoutManager(this)
         binding.yourCourseRecycleView.adapter = adapter
+    }
+
+    override fun onItemClick(position: Int) {
+        val intent = Intent(this, course_detail::class.java)
+        startActivity(intent)
     }
 }

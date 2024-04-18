@@ -3,18 +3,27 @@ package com.example.myapplication.ui
 import PageLessonAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.example.myapplication.adapters.TestAdapter
 import com.example.newsprojectpractice.R
+import com.example.newsprojectpractice.databinding.ActivityLessonBinding
 import com.google.android.material.tabs.TabLayout
 
 class lesson : AppCompatActivity() {
+    private val binding: ActivityLessonBinding by lazy {
+        ActivityLessonBinding.inflate(layoutInflater)
+    }
+
+
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager2
     private lateinit var adater: PageLessonAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_lesson)
+        setContentView(binding.root)
 
         tabLayout = findViewById(R.id.tabLayout)
         viewPager = findViewById(R.id.viewPager)

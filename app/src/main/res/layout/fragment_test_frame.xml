@@ -1,0 +1,60 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:padding="5dp"
+    tools:context="com.example.myapplication.fragment.test_frame">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_border"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <ImageView
+            android:id="@+id/quiz_representaion_image"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/quiz4" />
+
+        <TextView
+            android:id="@+id/order_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Quiz 1"
+            android:textAlignment="viewStart"
+            android:textColor="@color/orange" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Name of test "
+            android:textAlignment="viewStart"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/name_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:lineSpacingExtra="5dp"
+            android:text="Let's put your memory on this topic test. Solve tasks and check your knowledge"
+            android:textAlignment="viewStart"
+            android:textColor="@color/gray_border" />
+
+        <Button
+            android:id="@+id/quiz_start"
+            style="@style/MyButton_orange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Begin" />
+    </LinearLayout>
+</FrameLayout>

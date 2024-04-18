@@ -5,19 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.adapters.TestAdapter
 import com.example.newsprojectpractice.R
+import com.example.newsprojectpractice.databinding.ActivityLessonBinding
+import com.example.newsprojectpractice.databinding.FragmentTestLessonBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Test_lesson_Fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Test_lesson_Fragment : Fragment() {
+
+    private val binding: FragmentTestLessonBinding by lazy {
+        FragmentTestLessonBinding.inflate(layoutInflater)
+    }
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,20 +36,10 @@ class Test_lesson_Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_test_lesson_, container, false)
+        return binding.root
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Test_lesson_Fragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             Test_lesson_Fragment().apply {
@@ -57,4 +49,17 @@ class Test_lesson_Fragment : Fragment() {
                 }
             }
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val images = listOf(R.drawable.quiz3, R.drawable.quiz2, R.drawable.quiz5)
+        val orderNumbers = listOf("Quiz 1","Quiz 2", "Quiz 3")
+        val namesQuiz = listOf("Name of quiz 1", "Name of quiz 2", "Name of quiz 3")
+
+        val adapter = TestAdapter(images, orderNumbers, namesQuiz)
+        binding.quizRecycleView.layoutManager = LinearLayoutManager(context)
+        binding.quizRecycleView.adapter = adapter
+    }
+
 }

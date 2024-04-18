@@ -13,7 +13,7 @@ import com.example.newsprojectpractice.databinding.ActivityHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), CourseHomeAdapter.OnItemClickListener {
 
     private val binding: ActivityHomeBinding by lazy {
         ActivityHomeBinding.inflate(layoutInflater)
@@ -57,17 +57,25 @@ class MainActivity : AppCompatActivity() {
         val course_home_durations = listOf("3h 15mins", "2h 15mins", "1h 45mins", "2h 30mins")
         val course_home_title = listOf("React", "Kotlin", "Laravel", "Java")
         val course_home_title_detail = listOf("Advanced of web application", "Advanced of app application", "Advanced of web application", "Advanced of web application")
-        val adapter = CourseHomeAdapter(course_home_images, course_home_durations, course_home_title, course_home_title_detail)
+        val adapter = CourseHomeAdapter(course_home_images, course_home_durations, course_home_title, course_home_title_detail, this)
         binding.courseHomeRecyleView.layoutManager = LinearLayoutManager(this)
         binding.courseHomeRecyleView.adapter = adapter
-
-
 
         val catagories = listOf("#Back-end", "#Front-end")
         val adapter_cate = CategoriesHomeAdapter(catagories)
         binding.categoriesHomeRecycleView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.categoriesHomeRecycleView.adapter = adapter_cate
 
+        binding.courseHomeRecyleView.setOnClickListener{
+            val intent = Intent(this, course_detail::class.java)
+            startActivity(intent)
+        }
 
+
+    }
+
+    override fun onItemClick(position: Int) {
+         val intent = Intent(this, course_detail::class.java)
+         startActivity(intent)
     }
 }

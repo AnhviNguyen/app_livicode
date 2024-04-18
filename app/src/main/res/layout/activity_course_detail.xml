@@ -162,7 +162,7 @@
                 android:textAlignment="textStart"></ExpandableListView>
 
             <Button
-                android:id="@+id/dangky_course"
+                android:id="@+id/enter_course"
                 style="@style/MyButton"
                 android:layout_width="347dp"
                 android:layout_height="67dp"

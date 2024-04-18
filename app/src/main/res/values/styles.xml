@@ -19,5 +19,10 @@
     <style name="MyTabLayout.TextAppearance" parent="TextAppearance.Design.Tab">
         <item name="textAllCaps">false</item>
     </style>
+
+    <style name="MyButton_orange" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:background">@drawable/orange_border</item>
+    </style>
 </resources>
 

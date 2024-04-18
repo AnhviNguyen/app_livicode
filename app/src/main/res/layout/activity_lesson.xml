@@ -9,8 +9,9 @@
 
   <ScrollView
       android:layout_width="409dp"
-      android:layout_height="657dp"
+      android:layout_height="wrap_content"
       android:padding="10dp"
+      android:scrollbars="none"
       tools:layout_editor_absoluteX="1dp"
       tools:layout_editor_absoluteY="1dp">
 
@@ -70,10 +71,10 @@
           app:tabIndicatorAnimationMode="elastic"
           app:tabIndicatorColor="@null"
           app:tabIndicatorGravity="stretch"
-          app:tabTextAppearance="@style/MyTabLayout.TextAppearance"
           app:tabMode="fixed"
           app:tabSelectedTextAppearance="@style/TextAppearance.AppCompat.Body1"
-          app:tabSelectedTextColor="@color/white">
+          app:tabSelectedTextColor="@color/white"
+          app:tabTextAppearance="@style/MyTabLayout.TextAppearance">
 
       </com.google.android.material.tabs.TabLayout>
 

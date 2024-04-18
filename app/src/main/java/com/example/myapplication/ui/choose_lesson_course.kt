@@ -2,9 +2,12 @@ package com.example.myapplication.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import androidx.lifecycle.ReportFragment.Companion.reportFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.adapters.CourseHomeAdapter
 import com.example.myapplication.adapters.LessonAdapter
+import com.example.myapplication.fragment.back_btn
 import com.example.newsprojectpractice.R
 import com.example.newsprojectpractice.databinding.ActivityChooseLessonCourseBinding
 
@@ -23,5 +26,6 @@ class choose_lesson_course : AppCompatActivity() {
         val adapter = LessonAdapter(images, title, processbar)
         binding.LessonRecycleView.layoutManager = LinearLayoutManager(this)
         binding.LessonRecycleView.adapter = adapter
+
     }
 }
