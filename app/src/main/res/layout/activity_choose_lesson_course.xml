@@ -26,7 +26,7 @@
 
                 <fragment
                     android:id="@+id/course_fragment"
-                    android:name="com.example.myapplication.fragment.back_btn"
+                    android:name="com.example.myapplication.fragment.Back_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 

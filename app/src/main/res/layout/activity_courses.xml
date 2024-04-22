@@ -9,6 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="120dp"
         android:padding="20dp"
         android:scrollbars="none">
 
@@ -24,7 +25,7 @@
 
                 <fragment
                     android:id="@+id/mycourse_back_btn"
-                    android:name="com.example.myapplication.fragment.back_btn"
+                    android:name="com.example.myapplication.fragment.Back_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 

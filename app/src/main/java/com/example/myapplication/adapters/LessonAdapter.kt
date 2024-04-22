@@ -8,9 +8,23 @@ import com.example.newsprojectpractice.databinding.FragmentLessonFrameBinding
 class LessonAdapter (
     private val images: List<Int>,
     private val lesson_names: List<String>,
-    private val processBarIndex: MutableList<Int>
+    private val processBarIndex: MutableList<Int>,
+    private val listener: OnItemClickListener,
 ):RecyclerView.Adapter<LessonAdapter.LessonViewHolder>(){
-    class LessonViewHolder (private val binding: FragmentLessonFrameBinding): RecyclerView.ViewHolder(binding.root){
+
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
+    }
+    class LessonViewHolder (private val binding: FragmentLessonFrameBinding, private val listener: OnItemClickListener): RecyclerView.ViewHolder(binding.root){
+
+        init {
+            itemView.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    listener.onItemClick(position)
+                }
+            }
+        }
         fun bind(image: Int, lessonName: String, index: Int) {
             binding.lessonImage.setImageResource(image)
             binding.lessonName.text = lessonName
@@ -19,7 +33,8 @@ class LessonAdapter (
         }
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LessonViewHolder {
-        return  LessonViewHolder(FragmentLessonFrameBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        val binding =  FragmentLessonFrameBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return LessonViewHolder(binding, listener)
     }
 
     override fun getItemCount(): Int {

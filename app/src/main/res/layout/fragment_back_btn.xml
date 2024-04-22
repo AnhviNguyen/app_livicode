@@ -4,7 +4,7 @@
     android:tag="backBtn"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.myapplication.fragment.back_btn">
+    tools:context="com.example.myapplication.fragment.Back_btn">
 
     <ImageButton
         android:id="@+id/back_btn"

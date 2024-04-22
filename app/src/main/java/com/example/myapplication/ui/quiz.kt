@@ -1,8 +1,10 @@
 package com.example.myapplication.ui
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.myapplication.fragment.test_frame
 import com.example.newsprojectpractice.R
 import com.example.newsprojectpractice.databinding.ActivityLessonBinding
 import com.example.newsprojectpractice.databinding.ActivityQuizBinding
@@ -90,17 +92,20 @@ class quiz : AppCompatActivity() {
         if (currentQuestionIndex < questions.size -1){
             currentQuestionIndex++
             resetButton()
-            binding.questionText.postDelayed({displayQuestion()}, 1000)
+            binding.questionText.postDelayed({displayQuestion()}, 100)
         }
         else {
-            // hoan thanh tat ca cac cau hoi
+            binding.nextQuiz.text = "Submit"
+            val intent = Intent(this, complete_quiz::class.java)
+            startActivity(intent)
 
         }
     }
 
-
-
-
+//    override fun switchToQuizActivity() {
+//        val intent = Intent(this, quiz::class.java)
+//        startActivity(intent)
+//    }
 
 
 }

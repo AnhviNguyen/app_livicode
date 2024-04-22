@@ -16,7 +16,6 @@ class lesson : AppCompatActivity() {
         ActivityLessonBinding.inflate(layoutInflater)
     }
 
-
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager2
     private lateinit var adater: PageLessonAdapter

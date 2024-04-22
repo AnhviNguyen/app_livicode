@@ -30,6 +30,13 @@ class setting : AppCompatActivity() {
                     return@setOnItemSelectedListener true
                 }
 
+                R.id.bottom_search -> {
+                    startActivity(Intent(applicationContext, search::class.java))
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+                    finish()
+                    return@setOnItemSelectedListener true
+                }
+
                 R.id.bottom_setting -> return@setOnItemSelectedListener true
 
 

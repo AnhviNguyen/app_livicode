@@ -9,6 +9,10 @@
         android:icon="@drawable/learning"
         android:title="Courses" />
     <item
+        android:id="@+id/bottom_search"
+        android:icon="@drawable/search"
+        android:title="Search" />
+    <item
         android:id="@+id/bottom_profile"
         android:icon="@drawable/account"
         android:title="Profile" />

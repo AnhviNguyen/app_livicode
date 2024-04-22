@@ -9,6 +9,7 @@ import com.example.newsprojectpractice.R
 import CourseApdater
 import android.content.Intent
 import android.view.View
+import android.view.ViewGroup
 import com.example.myapplication.data.Expandable_data_course.data
 import com.example.newsprojectpractice.databinding.ActivityCourseDetailBinding
 import com.example.newsprojectpractice.databinding.ActivityHomeBinding
@@ -37,6 +38,8 @@ class course_detail : AppCompatActivity() {
 
         expandableListAdapter = CourseApdater(this, expandableListTitle, expandabalListDetail)
         expandableListView.setAdapter(expandableListAdapter)
+
+
         expandableListView.setOnGroupExpandListener {
             groupPosition ->
             Toast.makeText(

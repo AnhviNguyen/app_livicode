@@ -17,7 +17,8 @@ class CourseApdater(
     private val expandableListDetail: HashMap<String, List<String>>
 ) : BaseExpandableListAdapter() {
     override fun getGroupCount(): Int {
-       return expandableListTitle.size
+        val count = expandableListTitle.size
+       return count
     }
 
     override fun getChildrenCount(groupPosition: Int): Int {
