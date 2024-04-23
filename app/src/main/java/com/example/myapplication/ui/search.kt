@@ -5,6 +5,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.adapters.SearchResultAdapter
 import com.example.newsprojectpractice.R
 import com.example.newsprojectpractice.databinding.ActivityCoursesBinding
 import com.example.newsprojectpractice.databinding.ActivitySearchBinding
@@ -21,7 +23,7 @@ class search : AppCompatActivity() {
         setContentView(binding.root)
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigation)
-        bottomNavigationView.selectedItemId = R.id.bottom_setting
+        bottomNavigationView.selectedItemId = R.id.bottom_search
 
         bottomNavigationView.setOnItemSelectedListener { item: MenuItem ->
             when (item.itemId) {
@@ -57,5 +59,10 @@ class search : AppCompatActivity() {
             }
             false
         }
+
+        val search_results = listOf("Machine learning", "Project management", "Digital marketing", "Deep learning", "Data analytics", "Power bi")
+        val adapter = SearchResultAdapter(search_results)
+        binding.searchRecycleView.layoutManager = LinearLayoutManager(this)
+        binding.searchRecycleView.adapter = adapter
     }
 }

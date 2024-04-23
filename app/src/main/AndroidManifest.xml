@@ -22,7 +22,7 @@
             android:name="com.example.myapplication.ui.course_save"
             android:exported="false" />
         <activity
-            android:name="com.example.myapplication.ui.search"
+            android:name="com.example.myapplication.ui.MainActivity"
             android:exported="false" />
         <activity
             android:name="com.example.myapplication.ui.start"
@@ -55,7 +55,7 @@
             android:name="com.example.myapplication.ui.sign_up"
             android:exported="false" />
         <activity
-            android:name="com.example.myapplication.ui.MainActivity"
+            android:name="com.example.myapplication.ui.search"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
